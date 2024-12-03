@@ -1,8 +1,10 @@
 import numpy as np
 import cv2
 
-image_path = 'simple-pattern.png'
+image_path = 'car.png'
 image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+
+image = cv2.flip(image, 0) # fix flip
 
 sobel_x = np.array([[-1, 0, 1],
                     [-2, 0, 2],
